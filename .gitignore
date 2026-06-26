@@ -1,0 +1,5 @@
+*.bak
+# ignore backup files
+
+*~
+# ignore temporary files
