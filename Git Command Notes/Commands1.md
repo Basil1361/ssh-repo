@@ -6,8 +6,9 @@ git init
 
 ## 2. Track Untracked Files:
 ```bash
-git add . is only for that current repo
-git add -A is for all the files within the parent repo
+git add . = add files whose names begin with a dot in that current repo
+git add -A = for all the files within the parent repo
+git add * = means add all files in the current directory, except for files whose name begin with a dot.
 ```
 
 ## 3. Commiting Files:
@@ -22,7 +23,15 @@ git commit --amend --no-edit = Fast edit without committing
 ```bash
 git status = checking status of each files
 git log --oneline = check audits, simplified in one line
-git diff = before vs after
+git log --graph - Show a visual diagram, useful for diverging paths.
+git diff = Differences between the working directory and the staging area.
+# Changing the colour of the changes
+git config --global color.diff.old yellow
+git config --global color.diff.new blue
+
+# 
+git diff --staged = Differences between staging area and previous commit.
+git diff HEAD~1 = Differences between current commit and previous commit.
 ```
 
 ## 5. Changing File Stuff:
@@ -57,4 +66,24 @@ git checkout -- "file-name"
 git revert --no-edit HEAD = undo changes
 git checkout "specific hash" . = specific hashes
 # hash is obtained from git log
+```
+
+## 8. Checking Versions and help
+```bash
+git --version
+git --help
+```
+
+## 9. Setting identity:
+```bash
+git config --global user.name "First Last"
+git config --global user.email "me@example.com"
+git config --global --list
+```
+
+
+## Additional Notes:
+```bash
+HEAD is the pointer that indicates your current position in the project history
+
 ```
