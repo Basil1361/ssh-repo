@@ -112,10 +112,12 @@ git push origin --delete <branch-name> — Deletes the branch from your remote r
 git commit --amend --no-edit
 ```
 
+## 12. Check stage phase
+``` bash
+git ls -files --stage
+```
+
 ## Additional Notes:
 ```bash
 HEAD is the pointer that indicates your current position in the project history
 ```
-
-
-change
