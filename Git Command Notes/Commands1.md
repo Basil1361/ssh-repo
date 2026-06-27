@@ -1,3 +1,6 @@
+## Prereq:
+
+
 ## 1. Initialize Repo
 
 ```bash
@@ -37,7 +40,9 @@ git diff HEAD~1 = Differences between current commit and previous commit.
 ## 5. Changing File Stuff:
 ```bash
 mv = rename
-rm = remove
+rm = remove Local File
+git rm = Deletes Local File and remove git tracking
+git rm --cached  = delete local file but removes from Git Tracking
 touch = create new file
 touch "File Name"/.git-keep = Keep Track of Empty File
 code = open/create new file without save
@@ -80,10 +85,37 @@ git config --global user.name "First Last"
 git config --global user.email "me@example.com"
 git config --global --list
 ```
+## 10. Branch:
+```bash
+git branch — Lists all local branches in your repository.git branch 
+-r — Displays only remote tracking branches.git branch 
+-a — Shows both local and remote branches combined.git branch 
+-v — Lists branches along with their latest commit 
 
+git branch <branch-name> — Creates a new branch without switching to it.git checkout
+-b <branch-name> — Creates a new branch and immediately switches to it.git switch 
+-c <branch-name> — The modern Git syntax to create and switch to a branch.
+
+git merge <branch-name> — Combines history from the specified branch into your current branch.git merge 
+--abort — Cancels an in-progress merge if conflict resolution gets too messy.
+git rebase <branch-name> — Applies your current branch commits on top of the specified branch's latest commit for a cleaner linear history.
+```
+
+``` bash
+git push origin <branch-name> = Pushes a newly created local branch to your remote repository.
+git push -u origin <branch-name> — Pushes the branch and links it as an upstream tracking branch.
+git push origin --delete <branch-name> — Deletes the branch from your remote repository.
+```
+
+## 11. Instantly without commit message
+``` bash
+git commit --amend --no-edit
+```
 
 ## Additional Notes:
 ```bash
 HEAD is the pointer that indicates your current position in the project history
-
 ```
+
+
+change
