@@ -126,3 +126,19 @@ echo "node_modules/" >> .gitignore = append a thing to a file
 ```bash
 HEAD is the pointer that indicates your current position in the project history
 ```
+__________________________________________________________________________
+# Github:
+## Create new Repo on Command line:
+```bash
+git init
+git add .
+git commit -m "Message"
+git remote add origin "..."
+git push -u origin master
+```
+## Push existing Repository
+```bash
+git remote add origin "..."
+git push -u origin master
+
+```
