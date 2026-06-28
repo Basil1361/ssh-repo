@@ -141,3 +141,10 @@ git push -u origin main
 git remote add origin "..."
 git push -u origin main
 ```
+
+If main is ahead of master, it means main has commits that master does not have yet.
+
+git switch master
+git merge main
+
+git push origin master
