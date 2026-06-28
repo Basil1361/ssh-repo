@@ -5,6 +5,36 @@ Working Directory: Your project files where you are making changes.
 Staging Area (Index): A preparation area for grouping changes you want to save to history.
 Repository: The permanent records of your project's development history.
 ```
+__________________________________________________________________________
+# Github:
+## Create new Repo on Command line:
+```bash
+git init
+git add .
+git commit -m "Message"
+git remote add origin "..."
+git push -u origin main
+```
+## Push existing Repository
+```bash 
+git remote add origin "..."
+git push -u origin main/master -> depend which default
+```
+
+---------------
+## Using SSH Key
+Step 1: mkdir -p "/d/Test Keygen"
+Step 2: ssh-keygen -t ed25519 -C "your_email@example.com" -f "/d/Test Keygen/github_ed25519"
+Step 3: cat "/d/Test Keygen/github_ed25519.pub"
+Step 4: GitHub -> Settings -> SSH and GPG keys -> New SSH key
+Step 5: git remote add origin git@github.com:Basil1361/Repo-Testing.git
+Step 6: eval "$(ssh-agent -s)"
+Step 7: ssh-add "/d/Test Keygen/github_ed25519"
+Step 8: ssh -T git@github.com
+Step 9: git push origin main
+*And remember: add the .pub key to GitHub, but use the file without .pub in ssh-add.*
+
+________________________________________________________
 
 ## 1. Initialize Repo
 
@@ -147,41 +177,23 @@ git ls -files --stage
 ``` bash
 echo "node_modules/" >> .gitignore = append a thing to a file
 ```
-__________________________________________________________________________
-# Github:
-## Create new Repo on Command line:
-```bash
-git init
-git add .
-git commit -m "Message"
-git remote add origin "..."
-git push -u origin main
-```
-## Push existing Repository
-```bash 
-git remote add origin "..."
-git push -u origin main/master -> depend which default
-```
 
-If main is ahead of master
-
+## 14. Merging
+``` bash
+# If main is ahead of master
 git switch master
 git merge main
-
 git push origin master
+```
 
----------------
-Using SSH Key
-mkdir -p "/d/Test Keygen"
-ssh-keygen -t ed25519 -C "your_email@example.com" -f "/d/Test Keygen/github_ed25519"
-
-
-Become:
-D:\Test Keygen\github_ed25519
-
-eval "$(ssh-agent -s)"
-ssh-add "/d/Test Keygen/github_ed25519"
-git push origin main
+## 15. Pulling
+```bash
+git pull origin main/master = pull to see changes from remote.
+# unable to pull when have uncommitted local changes
+```
 
 
-git pull
+
+
+
+
