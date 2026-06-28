@@ -1,5 +1,10 @@
 ## Prereq:
-
+```bash
+HEAD is the pointer that indicates your current position in the project history
+Working Directory: Your project files where you are making changes.
+Staging Area (Index): A preparation area for grouping changes you want to save to history.
+Repository: The permanent records of your project's development history.
+```
 
 ## 1. Initialize Repo
 
@@ -107,6 +112,27 @@ git push -u origin <branch-name> — Pushes the branch and links it as an upstre
 git push origin --delete <branch-name> — Deletes the branch from your remote repository.
 ```
 
+## 10. Branches:
+### We use branches to
+"Prevent a messy history"
+"Avoid non-working versions in the history from incomplete work"
+"Work on multiple features/fixes at the same time"
+
+1. Main Branch: Usually the trusted working version, and the first branch. (historically called master)
+2. Feature Branch: A safe isolated space to develop without affecting the trusted version.
+3. Merging: Combining changes from different branches.
+
+- Fast-forward merge: Move the new commits from the child branch onto the parent branch.
+- Merge commit: Apply the changes as a single new commit on the parent branch. Leave the child branch in the network for traceability.
+- Squash merge: Collapse the commits from one branch into a single new commit on the other branch.
+
+```bash
+git branch "my-new-feature" = Start a branch from the current branch.
+git checkout "my-new-feature" - Change your working directory to a different version from the repository history.
+git merge - Apply the commits from one branch onto another branch. (Default: Fast forward merge)
+git switch
+```
+
 ## 11. Instantly without commit message
 ``` bash
 git commit --amend --no-edit
@@ -120,11 +146,6 @@ git ls -files --stage
 ## 13. Add things in a file
 ``` bash
 echo "node_modules/" >> .gitignore = append a thing to a file
-```
-
-## Additional Notes:
-```bash
-HEAD is the pointer that indicates your current position in the project history
 ```
 __________________________________________________________________________
 # Github:
