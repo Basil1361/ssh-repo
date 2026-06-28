@@ -134,11 +134,11 @@ git init
 git add .
 git commit -m "Message"
 git remote add origin "..."
-git push -u origin master
+git push -u origin main
 ```
 ## Push existing Repository
 ```bash
 git remote add origin "..."
-git push -u origin master
+git push -u origin main
 
 ```
