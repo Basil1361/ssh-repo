@@ -158,14 +158,30 @@ git remote add origin "..."
 git push -u origin main
 ```
 ## Push existing Repository
-```bash
+```bash 
 git remote add origin "..."
-git push -u origin main
+git push -u origin main/master -> depend which default
 ```
 
-If main is ahead of master, it means main has commits that master does not have yet.
+If main is ahead of master
 
 git switch master
 git merge main
 
 git push origin master
+
+---------------
+Using SSH Key
+mkdir -p "/d/Test Keygen"
+ssh-keygen -t ed25519 -C "your_email@example.com" -f "/d/Test Keygen/github_ed25519"
+
+
+Become:
+D:\Test Keygen\github_ed25519
+
+eval "$(ssh-agent -s)"
+ssh-add "/d/Test Keygen/github_ed25519"
+git push origin main
+
+
+git pull
