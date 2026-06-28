@@ -117,6 +117,11 @@ git commit --amend --no-edit
 git ls -files --stage
 ```
 
+## 13. Add things in a file
+``` bash
+echo "node_modules/" >> .gitignore = append a thing to a file
+```
+
 ## Additional Notes:
 ```bash
 HEAD is the pointer that indicates your current position in the project history
