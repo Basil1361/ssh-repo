@@ -33,7 +33,6 @@ git push -u origin main/master -> depend which default
 8. ssh -T git@github.com
 9. git push origin main
 *And remember: add the .pub key to GitHub, but use the file without .pub in ssh-add.*
-
 ________________________________________________________
 
 ## 1. Initialize Repo
@@ -191,8 +190,15 @@ git push origin master
 git pull origin main/master = pull to see changes from remote.
 # unable to pull when have uncommitted local changes
 ```
-
-
+## 15. Resolving different changes from local and remote repo
+```bash
+# After git add and commit
+# When pushed:
+git push origin main/master -> will notify that need to git pull
+git pull origin main/master -> will notify that got merge conflict
+resolve merge conflict
+git add and commit and push again
+```
 
 
 
