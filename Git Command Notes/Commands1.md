@@ -199,11 +199,7 @@ git pull origin main/master -> will notify that got merge conflict
 resolve merge conflict
 git add and commit and push again
 ```
-## 16. Edit files
-```bash
-nano file
-vi file
-```
+
 
 
 
